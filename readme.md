@@ -7,3 +7,7 @@ Ce simulateur offre une approche simplifiée pour générer des données CRM ada
 ### Points Clés
 - Génération rapide de données CRM synthétiques.
 - Analyse simplifiée.
+
+
+### À Faire
+- [ ] Analyse via streamlit
