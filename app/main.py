@@ -33,3 +33,8 @@ def seed_data(
         n_actions=n_actions,
         n_ventes=n_ventes
     )
+
+@app.get("/users")
+def get_all_users(db: Session = Depends(get_db)):
+    users = db.execute(text("SELECT * FROM personnes")).fetchall()
+    return {"users": [dict(user) for user in users]}
