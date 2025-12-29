@@ -13,7 +13,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U crm_user -d crm"]
+      test: ["CMD-SHELL", "pg_isready -U root -d crm"]
       interval: 5s
       timeout: 5s
       retries: 20
@@ -34,7 +34,7 @@ services:
     build: .
     container_name: crm_api
     environment:
-      DATABASE_URL: postgresql+psycopg://crm_user:crm_pass@db:5432/crm
+      DATABASE_URL: postgresql+psycopg://root:crm2025@db:5432/crm
     ports:
       - "8000:8000"
     depends_on:
