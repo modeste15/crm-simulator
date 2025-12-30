@@ -14,4 +14,6 @@ Ce simulateur offre une approche simplifiée pour générer des données CRM ada
 - [ ] Intégration et déploiement continus (CI/CD) pour automatiser les tests et les déploiements.
 - [ ] Complexifier la base (+25 tables)
 - [ ] Exposer Une api complete
+- [ ] Integrer Sonarqube
+
 
