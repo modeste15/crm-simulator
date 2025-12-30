@@ -15,5 +15,7 @@ Ce simulateur offre une approche simplifiée pour générer des données CRM ada
 - [ ] Complexifier la base (+10 tables)
 - [ ] Exposer Une api complete
 - [ ] Integrer Sonarqube
+- [ ] Projet Laravel pour qui se connecte a la meme base de donnée pour IHM USER/PASSWORD
+
 
 
