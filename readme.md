@@ -11,7 +11,7 @@ Ce simulateur offre une approche simplifiée pour générer des données CRM ada
 
 ### À Faire
 - [ ] Analyse via streamlit
-- [ ] Intégration et déploiement continus (CI/CD) pour automatiser les tests et les déploiements.
+- [ ] CI/CD pour automatiser les tests et les déploiements.
 - [ ] Complexifier la base (+10 tables)
 - [ ] Exposer Une api complete
 - [ ] Integrer Sonarqube
