@@ -4,10 +4,13 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select
 
 from .models import Personne, Entreprise, Interlocuteur, Action, Vente
+from werkzeug.security import generate_password_hash
 
 fake = Faker("fr_FR")
 
 ACTION_TYPES = ["call", "email", "meeting", "demo", "followup"]
+ROLES = ["admin", "user", "manager", "guest"]
+
 
 def _unique_siren() -> str:
     # 9 chiffres
@@ -19,7 +22,11 @@ def seed(db: Session, n_personnes=20, n_entreprises=50, n_interlocuteurs=120, n_
     for _ in range(n_personnes):
         nom = fake.name()
         email = fake.unique.email()
-        personnes.append(Personne(nom=nom, email=email))
+        role = random.choice(ROLES)
+        
+        
+        hashed_password = generate_password_hash("crm2025")
+        personnes.append(Personne(nom=nom, email=email, password=hashed_password, role=role))
     db.add_all(personnes)
     db.commit()
 

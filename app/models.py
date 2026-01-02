@@ -8,6 +8,8 @@ class Personne(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     nom: Mapped[str] = mapped_column(String(120), nullable=False)
     email: Mapped[str] = mapped_column(String(180), unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(String(255), nullable=False)
+    role: Mapped[str] = mapped_column(String(50), nullable=False)
 
     actions: Mapped[list["Action"]] = relationship(back_populates="personne")
     ventes: Mapped[list["Vente"]] = relationship(back_populates="personne")
